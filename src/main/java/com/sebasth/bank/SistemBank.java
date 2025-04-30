@@ -1,5 +1,6 @@
 package com.sebasth.bank;
 
+import com.sebasth.bank.controllers.CreditCardController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;

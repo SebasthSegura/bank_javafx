@@ -1,4 +1,4 @@
-package com.sebasth.bank;
+package com.sebasth.bank.controllers;
 
 public class AddCreditCardController {
 }

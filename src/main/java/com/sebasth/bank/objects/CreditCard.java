@@ -1,4 +1,4 @@
-package com.sebasth.bank;
+package com.sebasth.bank.objects;
 
 public class CreditCard {
     private String number;

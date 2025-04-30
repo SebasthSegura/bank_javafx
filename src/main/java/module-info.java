@@ -11,4 +11,8 @@ module com.sebasth.bank {
 
     opens com.sebasth.bank to javafx.fxml;
     exports com.sebasth.bank;
+    exports com.sebasth.bank.controllers;
+    opens com.sebasth.bank.controllers to javafx.fxml;
+    exports com.sebasth.bank.objects;
+    opens com.sebasth.bank.objects to javafx.fxml;
 }

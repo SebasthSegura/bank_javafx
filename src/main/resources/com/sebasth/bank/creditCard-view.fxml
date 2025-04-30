@@ -8,7 +8,9 @@
 
 <AnchorPane xmlns="http://javafx.com/javafx"
             xmlns:fx="http://javafx.com/fxml"
-            fx:controller="com.sebasth.bank.CreditCardController"
+            fx:controller="com.sebasth.bank.controllers.CreditCardController"
             prefHeight="400.0" prefWidth="600.0" >
+        <Label fx:id="cardNumberLabel" text="Número de Tarjeta"/>
+        <Label fx:id="expiryDateLabel" text="Fecha de Expiración"/>
 
 </AnchorPane>
