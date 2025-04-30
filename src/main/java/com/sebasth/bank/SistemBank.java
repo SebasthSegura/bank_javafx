@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class SistemBank extends Application {
 
-    private CrediCard crediCart;
+    private CreditCardController crediCart;
     private Label balanceLabel;
     private TextField descriptionInput;
     private TextField priceInput;
