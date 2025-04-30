@@ -5,6 +5,11 @@ public class Wallet {
     private double balance;
     private double limit;
 
+    public Wallet(double initialbalance){
+        this.balance = initialbalance;
+    }
+
+
     public String getAccountID() {
         return accountID;
     }
@@ -20,8 +25,15 @@ public class Wallet {
     public void setBalance(double balance) {
         this.balance = balance;
     }
-    public Wallet(String accountID){
-        this.limit = 100;
-        this.balance = 100;
+    public void deposit(double amount){
+        balance += amount;
+    }
+
+    public boolean withdraw(double amount){
+        if(balance >= amount){
+            balance -= amount;
+            return true;
+        }
+        return false;
     }
 }
