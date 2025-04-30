@@ -35,6 +35,9 @@ public class SistemBank extends Application {
         //damos parametros de tamaño
         Scene scene = new Scene(mainPane, 320, 240);
 
+        //enlazamo nuestro estilo de nuestro archivo css
+        scene.getStylesheets().add(getClass().getResource("MainStyles.css").toExternalForm());
+
         //damos un nombre
         stage.setTitle("MeBank");
         stage.setScene(scene);

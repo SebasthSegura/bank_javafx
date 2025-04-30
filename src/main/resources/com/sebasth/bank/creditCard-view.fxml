@@ -10,7 +10,7 @@
             xmlns:fx="http://javafx.com/fxml"
             fx:controller="com.sebasth.bank.controllers.CreditCardController"
             prefHeight="400.0" prefWidth="600.0" >
-        <Label fx:id="cardNumberLabel" text="Número de Tarjeta"/>
-        <Label fx:id="expiryDateLabel" text="Fecha de Expiración"/>
+        <Label fx:id="numberCard" text="Número de Tarjeta"/>
+        <Label fx:id="expiryDate" text="Fecha de Expiración"/>
 
 </AnchorPane>
