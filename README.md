@@ -20,17 +20,49 @@ bank/
 
 │   │   │   └── com/sebasth/bank/
 
-│   │   │       ├── BankController.java       # Controlador para la vista inicial
+│   │   │   └── com/sebasth/bank/controllers
+
+│   │   │       ├── BankController.java
+
+│   │   │       ├── AddCreditCardController.java
+
+│   │   │       ├── UserController.java
+
+│   │   │       ├── WalleController.java
+
+│   │   │       └── CreditCardController.java
+
+│   │   │   └── com/sebasth/bank/objeects
+
+│   │   │       ├── Wallet.java    
+
+│   │   │       ├── CreditCard.java    
+
+│   │   │       └── User.java
                     
 │   │   │       └── SistemBank.java           # Punto de entrada de la aplicación
-                    
+
 │   │   │       └── module-info.java          # Descriptor del módulo Java
                     
 │   │   └── resources/
 
 │   │       └── com/sebasth/bank/
 
+│   │       └── com/sebasth/bank/styles
+
+│   │   │       └── MainStyles.css
+
 │   │           └── hello-view.fxml           # Interfaz de usuario inicial
+
+│   │           └── credit-card-view.fxml 
+
+│   │           └── user-view.fxml 
+
+│   │           └── wallet-view.fxml
+
+│   │           └── add-credit-cardts.fxml
+
+│   │           └── main-view.fxml 
                     
 │   └── ...
 
