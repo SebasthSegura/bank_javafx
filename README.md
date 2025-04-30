@@ -6,9 +6,9 @@ Este proyecto es una aplicación de escritorio desarrollada con JavaFX para la g
 
 bank/
 
-├── .idea/                     # Configuración de IntelliJ IDEA (u otro IDE)
+├── .idea/                     # Configuración de IntelliJ IDEA 
 
-├── .mvn/                      # Archivos de Maven Wrapper
+├── .mvn/                       # Archivos de Maven Wrapper
 
 │   └── ...
 
@@ -20,30 +20,30 @@ bank/
 
 │   │   │   └── com/sebasth/bank/
 
-│   │   │       ├── BankController.java  # Controlador para la vista inicial
-
-│   │   │       └── SistemBank.java      # Punto de entrada de la aplicación
-
-│   │   │       └── module-info.java     # Descriptor del módulo Java
-
+│   │   │       ├── BankController.java       # Controlador para la vista inicial
+                    
+│   │   │       └── SistemBank.java           # Punto de entrada de la aplicación
+                    
+│   │   │       └── module-info.java          # Descriptor del módulo Java
+                    
 │   │   └── resources/
 
 │   │       └── com/sebasth/bank/
 
-│   │           └── hello-view.fxml      # Interfaz de usuario inicial
-
+│   │           └── hello-view.fxml           # Interfaz de usuario inicial
+                    
 │   └── ...
 
-├── target/                   # Directorio de salida para los archivos compilados y empaquetados
-
-├── .gitignore                # Especifica los archivos ignorados por Git
-
-├── mvnw                      # Script de Maven Wrapper para sistemas Unix
-
+├── target/                      # Directorio de salida para los archivos compilados y empaquetados
+    
+├── .gitignore                   # Especifica los archivos ignorados por Git
+    
+├── mvnw                      # Script de Maven Wrapper para sistemas Unix              
+    
 ├── mvnw.cmd                  # Script de Maven Wrapper para sistemas Windows
-
+    
 └── pom.xml                   # Archivo de configuración de Maven
-
+    
 
 ## Tecnologías Utilizadas
 
