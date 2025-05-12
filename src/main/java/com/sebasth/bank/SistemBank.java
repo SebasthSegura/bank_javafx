@@ -47,10 +47,10 @@ public class SistemBank extends Application {
 
         /*llamamos la funcion showCreditCardView y creamos una nueva tarjeta de credito para que
          se muestre con la nueva vista*/
-        showCreditCardView(new CreditCard("1231-1213-3431", "10/25"));
+        showCreditCardView(new CreditCard("1231-1213-3431", "10/25", "Visa"));
     }
 
-    /*creamos el metodo para que exista y no genere errores ademas poder usarlo*/
+    /*creamos el metodo para que exista y no genere errores además poder usarlo*/
     public void showCreditCardView(CreditCard creditCard) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("creditCard-view.fxml"));
         javafx.scene.layout.VBox creditCardPane = loader.load();

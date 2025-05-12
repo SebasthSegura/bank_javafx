@@ -15,8 +15,8 @@ public class User {
 
 
     // metodo para poder ingresar un usuario y los parametros que recibira
-    public User(String username){
-        this.userName = username;
+    public User(String userName){
+        this.userName = userName;
         this.creditCards = new ArrayList<>(creditCards);
         this.walletBalance = new Wallet(0).getBalance();
     }
