@@ -16,7 +16,7 @@ public class Loan {
     private String status;
 
     /*agregamos los constructores (builders)*/
-    public loan(){
+    public Loan(){
         this.borrowerId = borrowerId;
         this.principalAmount = principalAmount;
         this.interestRate = interestRate;
@@ -126,8 +126,8 @@ public class Loan {
     i sera la tasa de interes mensual y n sera el numero total de pagos en meses.
      */
 
-    private double calculateMonthlyPayment(){
-        if (principalAmount == null || interestRate == null || loanTermMonths == null || loanTermMonths == 0){
+    private Double calculateMonthlyPayment(){
+        if (loanTermMonths == null || loanTermMonths == 0){
             return 0.0;
         }
         double monthlyInterestRate = interestRate / 12.0;
@@ -135,7 +135,7 @@ public class Loan {
         if (denominator == 0) {
             return principalAmount / loanTermMonths;
         }
-        return (principalAmount * monthlyInterestRate * Math.pow(1 * monthlyInterestRate, loanTermMonths)) / denominator;
+        return (principalAmount * monthlyInterestRate * Math.pow(1 + monthlyInterestRate, loanTermMonths)) / denominator;
     }
     /*
     * calculamos la fecha de finalizacion del prestamo
@@ -149,9 +149,9 @@ public class Loan {
     /*
     * realiza un pago al prestamo
     * */
-    public boolean makePayments(double paymentAmount){
-        if (paymentAmount <= 0 || paymentAmount > remainingBalance){
-            return false;
+    public boolean makePayments(Double paymentAmount){
+        if (paymentAmount == null || paymentAmount <= 0 || paymentAmount > remainingBalance){
+            return false; //pago invalido
         }
         remainingBalance -= paymentAmount;
         if (remainingBalance == 0){
