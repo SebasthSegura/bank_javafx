@@ -15,7 +15,7 @@ public class UserController {
 
     /*metodo para recibir el objeto user (este podria ser llamado al cargar la vista)*/
 
-    public void setuser(User user) {
+    public void setUser(User user) {
         this.currentUser = user;
         updateView();
     }

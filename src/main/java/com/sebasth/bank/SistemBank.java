@@ -1,7 +1,9 @@
 package com.sebasth.bank;
 
 import com.sebasth.bank.controllers.CreditCardController;
+import com.sebasth.bank.controllers.UserController;
 import com.sebasth.bank.objects.CreditCard;
+import com.sebasth.bank.objects.User;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -35,9 +37,6 @@ public class SistemBank extends Application {
         //damos parametros de tamaño
         Scene scene = new Scene(mainPane, 320, 240);
 
-        //enlazamo nuestro estilo de nuestro archivo css
-        scene.getStylesheets().add(getClass().getResource("MainStyles.css").toExternalForm());
-
         //damos un nombre
         stage.setTitle("MeBank");
         stage.setScene(scene);
@@ -45,15 +44,24 @@ public class SistemBank extends Application {
         //mostramos
         stage.show();
 
+        /*creamos un usuario para mostrar la vista del usuario*/
+        User usuarioActual = new User("Sebasth");
+        usuarioActual.setFirstName("Sebastian");
+        usuarioActual.setLastName("Segura");
+        usuarioActual.setAge(20);
+        usuarioActual.setWalletBalance(150.0);
+        showUserView(usuarioActual);
+
         /*llamamos la funcion showCreditCardView y creamos una nueva tarjeta de credito para que
          se muestre con la nueva vista*/
         showCreditCardView(new CreditCard("1231-1213-3431", "10/25", "Visa"));
     }
 
-    /*creamos el metodo para que exista y no genere errores además poder usarlo*/
+    /*creamos los metodos para poder visualizar las vistas*/
+    /*Vista Tarjetas de creditos*/
     public void showCreditCardView(CreditCard creditCard) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource("creditCard-view.fxml"));
-        javafx.scene.layout.VBox creditCardPane = loader.load();
+        javafx.scene.layout.AnchorPane creditCardPane = loader.load();
 
         //llamamos el controlador
         CreditCardController controller = loader.getController();
@@ -65,6 +73,21 @@ public class SistemBank extends Application {
         mainPane.getChildren().clear();
         mainPane.getChildren().add(creditCardPane);
 
+    }
+    /*Vista Usuario*/
+    public void showUserView(User user) throws IOException{
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("user-view.fxml"));
+        javafx.scene.layout.VBox userPane = loader.load();
+
+        //llamamos el controlador
+        UserController userController= loader.getController();
+
+        //añadimos nuestra nueva variable al controlador como parametro principal
+        userController.setUser(user);
+
+        //limpamos el contenedor principal para llamar una nueva vista
+        mainPane.getChildren().clear();
+        mainPane.getChildren().add(userPane);
     }
 
     public static void main(String[] args) {

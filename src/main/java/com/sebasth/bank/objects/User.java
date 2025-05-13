@@ -17,7 +17,7 @@ public class User {
     // metodo para poder ingresar un usuario y los parametros que recibira
     public User(String userName){
         this.userName = userName;
-        this.creditCards = new ArrayList<>(creditCards);
+        this.creditCards = new ArrayList<>();
         this.walletBalance = new Wallet(0).getBalance();
     }
 
@@ -94,7 +94,7 @@ public class User {
     }
 
 
-    //metodo para añadir al usuario una card  y los parametros que recibira.
+    //metodo para añadir al usuario una card y los parametros que recibira.
     public void addCreditCard(CreditCard card){
         creditCards.add(card);
     }
@@ -105,16 +105,18 @@ public class User {
             System.out.println("Monto inválido. Por favor ingrese un valor entre 0 y 10000.");
         }
     }
-    public void withdrawFromWallet(double amount){
+    public boolean withdrawFromWallet(double amount){
         if (amount > 0 && this.walletBalance >= amount){
-            this.walletBalance += amount;
-        }else  {
+            this.walletBalance -= amount;
+            return true;
+        } else {
             System.out.println("Monto inválido o saldo insuficiente.");
+            return false;
         }
     }
 
-    /*sobre escribimos los metodos Hash, toString y equals
-    * ya que el nombre de usuario es unico
+    /*sobreescribimos los metodos Hash, toString y equals
+    * yaque el nombre de usuario es unico
     */
     @Override
     public boolean equals(Object o) {

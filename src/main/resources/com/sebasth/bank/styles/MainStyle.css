@@ -1,11 +1,52 @@
-.welcome-label {
-    -fx-font-size: 18px;
-    -fx-text-fill: navy;
+.label {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333; /* Color de texto gris oscuro */
+    -fx-padding: 5px; /* Espacio alrededor del texto */
 }
 
-.primary-button {
-    -fx-background-color: green;
+#numberCard {
+    -fx-font-size: 20px;
+    -fx-text-fill: navy;
+    -fx-padding: 10px;
+}
+
+#expiryDate {
+    -fx-font-style: italic;
+    -fx-text-fill: green;
+    -fx-padding: 5px;
+}
+
+.button {
+    -fx-background-color: #007bff; /* Azul primario */
     -fx-text-fill: white;
-    -fx-padding: 10px 20px;
+    -fx-font-size: 14px;
+    -fx-padding: 8px 15px; /* Padding vertical y horizontal */
+    -fx-border-radius: 5px;
+    -fx-cursor: hand; /* Cambiar el cursor al pasar por encima */
+}
+
+.button:hover {
+    -fx-background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+}
+
+.vbox {
+    -fx-spacing: 15px; /* Espacio entre los elementos dentro del VBox */
+    -fx-alignment: center; /* Centrar los elementos */
+    -fx-padding: 20px; /* Espacio alrededor del contenido del VBox */
+}
+
+.anchor-pane {
+    -fx-background-color: #f4f4f4; /* Fondo gris claro */
+}
+
+.title-label {
+    -fx-font-size: 24px;
     -fx-font-weight: bold;
+    -fx-text-fill: #28a745; /* Verde éxito */
+}
+
+.info-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #6c757d; /* Gris secundario */
 }
