@@ -26,4 +26,13 @@ public class CreditCardController {
             expiryDate.setText("Fecha de Expiracion: " + card.getExpirateDate());
         }
     }
+
+    //metodo para inicializar la vista de la tarjeta de credito
+    @FXML
+    public void initilize(){
+        if (card != null) {
+            numberCard.setText("Numero de Tarjeta: " + card.getNumber());
+            expiryDate.setText("Fecha de Expiracion: " + card.getExpirateDate());
+        }
+     }
 }
