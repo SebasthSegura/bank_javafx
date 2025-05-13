@@ -1,22 +1,29 @@
+/* Estilo general para etiquetas */
 .label {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
     -fx-text-fill: #333333; /* Color de texto gris oscuro */
     -fx-padding: 5px; /* Espacio alrededor del texto */
+    -fx-alignment: center; /* Centrar texto dentro del contenedor */
 }
 
+/* Estilo para el número de tarjeta */
 #numberCard {
     -fx-font-size: 20px;
     -fx-text-fill: navy;
     -fx-padding: 10px;
+    -fx-alignment: center; /* Centrar texto */
 }
 
+/* Estilo para la fecha de expiración */
 #expiryDate {
     -fx-font-style: italic;
     -fx-text-fill: green;
     -fx-padding: 5px;
+    -fx-alignment: center; /* Centrar texto */
 }
 
+/* Estilo para botones */
 .button {
     -fx-background-color: #007bff; /* Azul primario */
     -fx-text-fill: white;
@@ -24,29 +31,42 @@
     -fx-padding: 8px 15px; /* Padding vertical y horizontal */
     -fx-border-radius: 5px;
     -fx-cursor: hand; /* Cambiar el cursor al pasar por encima */
+    -fx-alignment: center; /* Centrar texto en el botón */
 }
 
 .button:hover {
     -fx-background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
 }
 
+/* Estilo para VBox */
 .vbox {
     -fx-spacing: 15px; /* Espacio entre los elementos dentro del VBox */
     -fx-alignment: center; /* Centrar los elementos */
     -fx-padding: 20px; /* Espacio alrededor del contenido del VBox */
 }
 
+/* Estilo para AnchorPane */
 .anchor-pane {
     -fx-background-color: #f4f4f4; /* Fondo gris claro */
+    -fx-alignment: center; /* Centrar contenido */
 }
 
+/* Estilo para etiquetas de título */
 .title-label {
     -fx-font-size: 24px;
     -fx-font-weight: bold;
     -fx-text-fill: #28a745; /* Verde éxito */
+    -fx-alignment: center; /* Centrar texto */
 }
 
+/* Estilo para etiquetas de información */
 .info-label {
     -fx-font-size: 14px;
     -fx-text-fill: #6c757d; /* Gris secundario */
+    -fx-alignment: center; /* Centrar texto */
+}
+
+/* Estilo para centrar todo el contenido en StackPane */
+.stack-pane {
+    -fx-alignment: center; /* Centrar contenido */
 }
