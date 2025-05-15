@@ -1,10 +1,16 @@
+/* Estilo general para la ventana */
+.root {
+    -fx-background-color: #f8f9fa; /* Fondo gris claro */
+    -fx-font-family: "Segoe UI", sans-serif; /* Fuente moderna */
+}
+
 /* Estilo general para etiquetas */
 .label {
     -fx-font-size: 16px;
     -fx-font-weight: bold;
-    -fx-text-fill: #333333; /* Color de texto gris oscuro */
-    -fx-padding: 5px; /* Espacio alrededor del texto */
-    -fx-alignment: center; /* Centrar texto dentro del contenedor */
+    -fx-text-fill: #212529; /* Color de texto gris oscuro */
+    -fx-padding: 5px;
+    -fx-alignment: center;
 }
 
 /* Estilo para el número de tarjeta */
@@ -23,40 +29,83 @@
     -fx-alignment: center; /* Centrar texto */
 }
 
+/* Estilo para títulos */
+.title-label {
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Azul corporativo */
+    -fx-padding: 10px;
+    -fx-alignment: center;
+}
+
+/* Estilo para subtítulos */
+.subtitle-label {
+    -fx-font-size: 18px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #6c757d; /* Gris secundario */
+    -fx-padding: 5px;
+    -fx-alignment: center;
+}
+
 /* Estilo para botones */
 .button {
-    -fx-background-color: #007bff; /* Azul primario */
+    -fx-background-color: #007bff; /* Azul corporativo */
     -fx-text-fill: white;
     -fx-font-size: 14px;
-    -fx-padding: 8px 15px; /* Padding vertical y horizontal */
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
     -fx-border-radius: 5px;
-    -fx-cursor: hand; /* Cambiar el cursor al pasar por encima */
-    -fx-alignment: center; /* Centrar texto en el botón */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 2);
+    -fx-cursor: hand;
 }
 
 .button:hover {
-    -fx-background-color: #0056b3; /* Azul más oscuro al pasar el mouse */
+    -fx-background-color: #0056b3; /* Azul más oscuro */
+}
+
+.button:pressed {
+    -fx-background-color: #003f7f; /* Azul aún más oscuro */
+}
+
+/* Estilo para campos de texto */
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #ced4da; /* Gris claro */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: #495057; /* Gris oscuro */
+}
+
+.text-field:focused {
+    -fx-border-color: #007bff; /* Azul corporativo */
+    -fx-border-width: 2px;
 }
 
 /* Estilo para VBox */
 .vbox {
-    -fx-spacing: 15px; /* Espacio entre los elementos dentro del VBox */
-    -fx-alignment: center; /* Centrar los elementos */
-    -fx-padding: 20px; /* Espacio alrededor del contenido del VBox */
+    -fx-spacing: 20px;
+    -fx-alignment: center;
+    -fx-padding: 30px;
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6; /* Gris claro */
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
 }
 
 /* Estilo para AnchorPane */
 .anchor-pane {
-    -fx-background-color: #f4f4f4; /* Fondo gris claro */
-    -fx-alignment: center; /* Centrar contenido */
+    -fx-background-color: #f8f9fa; /* Fondo gris claro */
+    -fx-padding: 20px;
 }
 
 /* Estilo para etiquetas de título */
 .title-label {
-    -fx-font-size: 24px;
+    -fx-font-size: 28px;
     -fx-font-weight: bold;
-    -fx-text-fill: #28a745; /* Verde éxito */
-    -fx-alignment: center; /* Centrar texto */
+    -fx-text-fill: #007bff; /* Azul corporativo */
+    -fx-padding: 10px;
+    -fx-alignment: center;
 }
 
 /* Estilo para etiquetas de información */
@@ -68,5 +117,38 @@
 
 /* Estilo para centrar todo el contenido en StackPane */
 .stack-pane {
-    -fx-alignment: center; /* Centrar contenido */
+    -fx-background-color: #f8f9fa; /* Fondo gris claro */
+    -fx-alignment: center;
+}
+
+/* Estilo para tablas */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #dee2e6; /* Gris claro */
+    -fx-border-radius: 5px;
+    -fx-font-size: 14px;
+}
+
+.table-view .column-header {
+    -fx-background-color: #007bff; /* Azul corporativo */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+/* Estilo para mensajes de error */
+.error-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #dc3545; /* Rojo de error */
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-alignment: center;
+}
+
+/* Estilo para mensajes de éxito */
+.success-label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #28a745; /* Verde de éxito */
+    -fx-font-weight: bold;
+    -fx-padding: 5px;
+    -fx-alignment: center;
 }
