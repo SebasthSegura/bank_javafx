@@ -32,7 +32,13 @@ bank/
 
 │   │   │       └── CreditCardController.java
 
-│   │   │   └── com/sebasth/bank/objeects
+│   │   │   └── com/sebasth/bank/objects
+
+│   │   │       ├── Authentication.java
+
+│   │   │       ├── Loan.java
+
+│   │   │       ├── Role.java
 
 │   │   │       ├── Wallet.java    
 
@@ -40,9 +46,9 @@ bank/
 
 │   │   │       └── User.java
                     
-│   │   │       └── SistemBank.java           # Punto de entrada de la aplicación
+│   │   │       └── SistemBank.java           
 
-│   │   │       └── module-info.java          # Descriptor del módulo Java
+│   │   │       └── module-info.java          
                     
 │   │   └── resources/
 
@@ -51,8 +57,6 @@ bank/
 │   │       └── com/sebasth/bank/styles
 
 │   │   │       └── MainStyles.css
-
-│   │           └── hello-view.fxml           # Interfaz de usuario inicial
 
 │   │           └── credit-card-view.fxml 
 
@@ -66,15 +70,15 @@ bank/
                     
 │   └── ...
 
-├── target/                      # Directorio de salida para los archivos compilados y empaquetados
+├── target/                     
     
-├── .gitignore                   # Especifica los archivos ignorados por Git
+├── .gitignore                   
     
-├── mvnw                      # Script de Maven Wrapper para sistemas Unix              
+├── mvnw                                   
     
-├── mvnw.cmd                  # Script de Maven Wrapper para sistemas Windows
+├── mvnw.cmd                  
     
-└── pom.xml                   # Archivo de configuración de Maven
+└── pom.xml                   
     
 
 ## Tecnologías Utilizadas
