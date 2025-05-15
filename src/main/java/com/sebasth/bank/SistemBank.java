@@ -92,6 +92,41 @@ public class SistemBank extends Application {
         mainPane.getChildren().add(userPane);
     }
 
+/*Vista añadir tarjetas de credito*/
+public void showAddCreditCardView(CreditCard credit) throws IOException {
+
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("add-Credit-Card-view.fxml"));
+    javafx.scene.layout.AnchorPane addCreditCardPane = loader.load();
+
+    //llamamos el controlador
+    CreditCardController controller = loader.getController();
+
+    //añadimos nuestra nueva variable al controlador como parametro principal
+    controller.setCreditCard(credit);
+
+    //limpamos el contenedor principal para llamar una nueva vista
+    mainPane.getChildren().clear();
+    mainPane.getChildren().add(addCreditCardPane);
+}
+
+/*Vista Cartera*/
+public void showWalletView(User wallet) throws IOException {
+
+    FXMLLoader loader = new FXMLLoader(getClass().getResource("wallet-view.fxml"));
+    javafx.scene.layout.AnchorPane walletPane = loader.load();
+
+    //llamamos el controlador
+    UserController userController = loader.getController();
+
+    //añadimos nuestra nueva variable al controlador como parametro principal
+    userController.setUser(wallet);
+
+    //limpamos el contenedor principal para llamar una nueva vista
+    mainPane.getChildren().clear();
+    mainPane.getChildren().add(walletPane);
+}
+
+
     public static void main(String[] args) {
         launch();
     }
