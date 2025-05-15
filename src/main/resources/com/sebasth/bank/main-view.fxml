@@ -9,9 +9,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.BankController">
    <children>
-      <MenuBar fx:id="menu" layoutY="2.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="25.0" prefWidth="600.0">
+      <MenuBar fx:id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -30,7 +30,7 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label fx:id="welcome" layoutX="205.0" layoutY="27.0" text="Bienvenido a MeBank" textAlignment="CENTER" textOverrun="CLIP">
+      <Label fx:id="bankLabelText" layoutX="205.0" layoutY="27.0" text="Bienvenido a MeBank" textAlignment="CENTER" textOverrun="CLIP">
          <font>
             <Font size="20.0" />
          </font>
@@ -38,10 +38,10 @@
       <Label layoutX="14.0" layoutY="57.0" prefHeight="17.0" prefWidth="263.0" text="Navega entre las otras secciones:" />
       <ButtonBar fx:id="barButton" layoutY="74.0" prefHeight="40.0" prefWidth="295.0">
          <buttons>
-          <Button mnemonicParsing="false" text="Agregar Tarejetas" />
-            <Button mnemonicParsing="false" text="Ir a Tarejetas Creditos" />
-            <Button mnemonicParsing="false" text="Ir a Billetera" />
-            <Button mnemonicParsing="false" text="Ir Usuarios" />
+          <Button mnemonicParsing="false" text="Agregar Tarejetas" onAction="#navigateToAddCreditCardView"/>
+            <Button mnemonicParsing="false"  text="Ir a Tarejetas Creditos" onAction="#navigateToCreditCardView"/>
+            <Button mnemonicParsing="false"  text="Ir a Billetera" onAction="#navigateToWalletView"/>
+            <Button mnemonicParsing="false"  text="Ir Usuarios" onAction="#navigateToUserView"/>
          </buttons>
       </ButtonBar>
    </children>

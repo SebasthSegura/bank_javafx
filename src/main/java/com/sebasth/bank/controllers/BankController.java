@@ -35,6 +35,7 @@ public class BankController {
     @FXML
     private void navigateToUserView(){
         if (mainApp != null && currentUser != null){
+            mainPane.getChildren().clear();
             try {
                 mainApp.showUserView(currentUser);
             }catch (IOException e){
@@ -46,6 +47,7 @@ public class BankController {
     @FXML
     private  void  navigateToWalletView(){
         if (mainApp != null && currentUser != null){
+            mainPane.getChildren().clear();
             try{
                 mainApp.showWalletView(currentUser);
             }catch (IOException e){
@@ -57,6 +59,7 @@ public class BankController {
     @FXML
     private void navigateToAddCreditCardView(){
         if(mainApp != null){
+            mainPane.getChildren().clear();
             try{
                 mainApp.showAddCreditCardView(new CreditCard("XXXX-XXXX-XXXX-4381", "9/29", "MasterCard"));
             }catch (IOException e){
@@ -68,6 +71,7 @@ public class BankController {
     @FXML
     private void navigateToCreditCardView(){
         if (mainApp != null){
+            mainPane.getChildren().clear();
             CreditCard sampleCard = new CreditCard("XXXX-XXXX-XXXX-6361", "12/29", "Visa");
             try {
                 mainApp.showCreditCardView(sampleCard);

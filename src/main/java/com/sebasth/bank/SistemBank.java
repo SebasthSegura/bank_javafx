@@ -53,11 +53,11 @@ public class SistemBank extends Application {
 //        usuarioActual.setWalletBalance(150.0);
 //        showUserView(usuarioActual);
 
+
         /*llamamos la funcion showCreditCardView y creamos una nueva tarjeta de credito para que
          se muestre con la nueva vista*/
 //        showCreditCardView(new CreditCard("1231-1213-3431", "10/25", "Visa"));
     }
-
     /*creamos los metodos para poder visualizar las vistas*/
     /*Vista Tarjetas de creditos*/
     public void showCreditCardView(CreditCard creditCard) throws IOException {
