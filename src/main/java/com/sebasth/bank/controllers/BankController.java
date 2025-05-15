@@ -16,7 +16,7 @@ public class BankController {
     @FXML
     private Label bankLabelText;
     private Label serviceLabelText;
-    private AnchorPane mainPanel;
+    private AnchorPane mainPane;
     private SistemBank mainApp;
     private User currentUser;
 

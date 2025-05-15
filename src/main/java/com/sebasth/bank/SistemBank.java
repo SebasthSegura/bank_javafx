@@ -16,7 +16,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class SistemBank extends Application {
-    private StackPane mainPane; //panel Principal a usar
+    private javafx.scene.layout.AnchorPane mainPane; //panel Principal a usar
 
     private Label balanceLabel;
     private TextField descriptionInput;
@@ -37,7 +37,6 @@ public class SistemBank extends Application {
         //damos parametros de tamaño
         Scene scene = new Scene(mainPane, 320, 240);
 
-        scene.getStylesheets().add(getClass().getResource("styles/MainStyle.css").toExternalForm());
 
         //damos un nombre
         stage.setTitle("MeBank");
