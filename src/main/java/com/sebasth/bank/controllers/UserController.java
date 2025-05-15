@@ -35,7 +35,7 @@ public class UserController {
     /*creamos metodos para manejar eventos de la interfaz de usuario*/
     @FXML
     private void handleDepositButtonAction() {
-        // obtener el monto del deposito desde la interfaz de usuario
+        // obtener el monto del deposit desde la interfaz de usuario
         double depositAmount = 50.0;
         currentUser.depositToWallet(depositAmount);
         updateView();
@@ -48,6 +48,15 @@ public class UserController {
             updateView();
         }else {
             walletBalanceLabel.setText("Saldo insuficiente");
+        }
+    }
+
+    @FXML
+    public  void initialize() {
+        // Este método se llama automáticamente al cargar la vista
+        // Aquí puedes inicializar cualquier cosa que necesites
+        if (currentUser != null) {
+            updateView();
         }
     }
 }
