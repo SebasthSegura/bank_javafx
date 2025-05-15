@@ -29,7 +29,7 @@ public class BankController {
 
     @FXML
     public void initialize() {
-        bankLabelText.setText("welcome Bank aplication!");
+        bankLabelText.setText("Bienvenido a MeBank");
     }
 
     @FXML

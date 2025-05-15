@@ -46,16 +46,16 @@ public class SistemBank extends Application {
         stage.show();
 
         /*creamos un usuario para mostrar la vista del usuario*/
-        User usuarioActual = new User("Sebasth");
-        usuarioActual.setFirstName("Sebastian");
-        usuarioActual.setLastName("Segura");
-        usuarioActual.setAge(20);
-        usuarioActual.setWalletBalance(150.0);
-        showUserView(usuarioActual);
+//        User usuarioActual = new User("Sebasth");
+//        usuarioActual.setFirstName("Sebastian");
+//        usuarioActual.setLastName("Segura");
+//        usuarioActual.setAge(20);
+//        usuarioActual.setWalletBalance(150.0);
+//        showUserView(usuarioActual);
 
         /*llamamos la funcion showCreditCardView y creamos una nueva tarjeta de credito para que
          se muestre con la nueva vista*/
-        showCreditCardView(new CreditCard("1231-1213-3431", "10/25", "Visa"));
+//        showCreditCardView(new CreditCard("1231-1213-3431", "10/25", "Visa"));
     }
 
     /*creamos los metodos para poder visualizar las vistas*/
