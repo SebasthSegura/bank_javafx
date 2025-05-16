@@ -10,13 +10,13 @@ import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.BorderPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class SistemBank extends Application {
-    private javafx.scene.layout.AnchorPane mainPane; //panel Principal a usar
+    private javafx.scene.layout.BorderPane mainPane; //panel Principal a usar
 
     private Label balanceLabel;
     private TextField descriptionInput;
@@ -36,6 +36,10 @@ public class SistemBank extends Application {
 
         //damos parametros de tamaño
         Scene scene = new Scene(mainPane, 320, 240);
+
+        //añadimos el css
+        //scene.getStylesheets().add(getClass().getResource("styles/MainStyle.css").toExternalForm());
+        scene.getStylesheets().add(getClass().getResource("styles/MainStyle.css").toExternalForm());
 
 
         //damos un nombre

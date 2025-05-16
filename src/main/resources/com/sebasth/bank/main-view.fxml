@@ -7,11 +7,28 @@
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.layout.BorderPane?>
 
-<AnchorPane fx:id="background" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.BankController">
-   <children>
-      <MenuBar fx:id="menu" layoutY="2.0" prefHeight="25.0" prefWidth="600.0">
+
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane fx:id="main" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="bankLabelText" layoutX="190.0" layoutY="6.0" prefHeight="37.0" prefWidth="220.0" text="Bienvenido estimado usario de MeBank" />
+            <Label fx:id="h2Labeltext" layoutX="14.0" layoutY="54.0" prefHeight="30.0" prefWidth="175.0" text="Navega entre las otras secciones:" />
+            <ButtonBar fx:id="bar_button" layoutX="10.0" layoutY="92.0" prefHeight="40.0" prefWidth="580.0">
+              <buttons>
+                <Button fx:id="button_1" mnemonicParsing="false" prefHeight="25.0" prefWidth="207.0" text="Ir a Billetera" />
+                  <Button fx:id="button_2" mnemonicParsing="false" text="Agregar Creditos" />
+                  <Button fx:id="button_3" mnemonicParsing="false" text="Ir a Creditos" />
+                  <Button fx:id="button_4" mnemonicParsing="false" text="Ir a usuarios" />
+              </buttons>
+            </ButtonBar>
+         </children>
+      </AnchorPane>
+   </center>
+   <top>
+      <MenuBar fx:id="menu_bar" BorderPane.alignment="CENTER">
         <menus>
           <Menu mnemonicParsing="false" text="File">
             <items>
@@ -30,19 +47,5 @@
           </Menu>
         </menus>
       </MenuBar>
-      <Label fx:id="bankLabelText" layoutX="205.0" layoutY="27.0" text="Bienvenido a MeBank" textAlignment="CENTER" textOverrun="CLIP">
-         <font>
-            <Font size="20.0" />
-         </font>
-      </Label>
-      <Label layoutX="14.0" layoutY="57.0" prefHeight="17.0" prefWidth="263.0" text="Navega entre las otras secciones:" />
-      <ButtonBar fx:id="barButton" layoutY="74.0" prefHeight="40.0" prefWidth="295.0">
-         <buttons>
-          <Button mnemonicParsing="false" text="Agregar Tarejetas" onAction="#navigateToAddCreditCardView"/>
-            <Button mnemonicParsing="false"  text="Ir a Tarejetas Creditos" onAction="#navigateToCreditCardView"/>
-            <Button mnemonicParsing="false"  text="Ir a Billetera" onAction="#navigateToWalletView"/>
-            <Button mnemonicParsing="false"  text="Ir Usuarios" onAction="#navigateToUserView"/>
-         </buttons>
-      </ButtonBar>
-   </children>
-</AnchorPane>
+   </top>
+</BorderPane>

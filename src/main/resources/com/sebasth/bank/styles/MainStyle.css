@@ -1,154 +1,82 @@
-/* Estilo general para la ventana */
-.root {
-    -fx-background-color: #f8f9fa; /* Fondo gris claro */
-    -fx-font-family: "Segoe UI", sans-serif; /* Fuente moderna */
-}
+/* Estilo simple y profesional para aplicación bancaria JavaFX */
 
-/* Estilo general para etiquetas */
-.label {
-    -fx-font-size: 16px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #212529; /* Color de texto gris oscuro */
-    -fx-padding: 5px;
-    -fx-alignment: center;
-}
-
-/* Estilo para el número de tarjeta */
-#numberCard {
-    -fx-font-size: 20px;
-    -fx-text-fill: navy;
-    -fx-padding: 10px;
-    -fx-alignment: center; /* Centrar texto */
-}
-
-/* Estilo para la fecha de expiración */
-#expiryDate {
-    -fx-font-style: italic;
-    -fx-text-fill: green;
-    -fx-padding: 5px;
-    -fx-alignment: center; /* Centrar texto */
-}
-
-/* Estilo para títulos */
-.title-label {
-    -fx-font-size: 28px;
-    -fx-font-weight: bold;
-    -fx-text-fill: #007bff; /* Azul corporativo */
-    -fx-padding: 10px;
-    -fx-alignment: center;
-}
-
-/* Estilo para subtítulos */
-.subtitle-label {
-    -fx-font-size: 18px;
-    -fx-font-weight: normal;
-    -fx-text-fill: #6c757d; /* Gris secundario */
-    -fx-padding: 5px;
-    -fx-alignment: center;
-}
-
-/* Estilo para botones */
-.button {
-    -fx-background-color: #007bff; /* Azul corporativo */
-    -fx-text-fill: white;
-    -fx-font-size: 14px;
-    -fx-font-weight: bold;
-    -fx-padding: 10px 20px;
-    -fx-border-radius: 5px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 4, 0, 0, 2);
-    -fx-cursor: hand;
-}
-
-.button:hover {
-    -fx-background-color: #0056b3; /* Azul más oscuro */
-}
-
-.button:pressed {
-    -fx-background-color: #003f7f; /* Azul aún más oscuro */
-}
-
-/* Estilo para campos de texto */
-.text-field {
-    -fx-background-color: white;
-    -fx-border-color: #ced4da; /* Gris claro */
-    -fx-border-radius: 5px;
-    -fx-padding: 5px;
-    -fx-font-size: 14px;
-    -fx-text-fill: #495057; /* Gris oscuro */
-}
-
-.text-field:focused {
-    -fx-border-color: #007bff; /* Azul corporativo */
+/* Fondo general del BorderPane */
+#background {
+    -fx-background-color: linear-gradient(to bottom right, #e9ecef, #f8f9fa 80%);
+    -fx-border-color: #007bff;
     -fx-border-width: 2px;
-}
-
-/* Estilo para VBox */
-.vbox {
-    -fx-spacing: 20px;
-    -fx-alignment: center;
-    -fx-padding: 30px;
-    -fx-background-color: white;
-    -fx-border-color: #dee2e6; /* Gris claro */
-    -fx-border-radius: 10px;
-    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 10, 0, 0, 5);
-}
-
-/* Estilo para AnchorPane */
-.anchor-pane {
-    -fx-background-color: #f8f9fa; /* Fondo gris claro */
+    -fx-border-radius: 14px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.08), 16, 0.2, 0, 4);
     -fx-padding: 20px;
 }
 
-/* Estilo para etiquetas de título */
-.title-label {
-    -fx-font-size: 28px;
+/* MenuBar superior */
+.menu-bar, #menu_bar {
+    -fx-background-color: #007bff;
+    -fx-border-radius: 8px 8px 0 0;
+    -fx-padding: 0 10px;
+}
+.menu-bar .label, #menu_bar .label {
+    -fx-text-fill: #fff;
     -fx-font-weight: bold;
-    -fx-text-fill: #007bff; /* Azul corporativo */
-    -fx-padding: 10px;
-    -fx-alignment: center;
+    -fx-font-size: 15px;
 }
-
-/* Estilo para etiquetas de información */
-.info-label {
+.menu-bar .menu .menu-item, #menu_bar .menu .menu-item {
+    -fx-background-color: #f8f9fa;
+    -fx-text-fill: #212529;
     -fx-font-size: 14px;
-    -fx-text-fill: #6c757d; /* Gris secundario */
-    -fx-alignment: center; /* Centrar texto */
+}
+.menu-bar .menu .menu-item:hover, #menu_bar .menu .menu-item:hover {
+    -fx-background-color: #e2e6ea;
 }
 
-/* Estilo para centrar todo el contenido en StackPane */
-.stack-pane {
-    -fx-background-color: #f8f9fa; /* Fondo gris claro */
-    -fx-alignment: center;
-}
-
-/* Estilo para tablas */
-.table-view {
+/* Panel central */
+#main {
     -fx-background-color: white;
-    -fx-border-color: #dee2e6; /* Gris claro */
-    -fx-border-radius: 5px;
-    -fx-font-size: 14px;
+    -fx-border-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 8, 0, 0, 2);
+    -fx-padding: 30px 20px 20px 20px;
 }
 
-.table-view .column-header {
-    -fx-background-color: #007bff; /* Azul corporativo */
+/* Título principal */
+#bankLabelText {
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff;
+    -fx-padding: 10px 0 10px 0;
+    -fx-alignment: center;
+}
+
+/* Subtítulo */
+#h2Labeltext {
+    -fx-font-size: 15px;
+    -fx-text-fill: #495057;
+    -fx-padding: 5px 0 15px 0;
+    -fx-font-weight: 600;
+}
+
+/* ButtonBar y botones */
+.button-bar, #bar_button {
+    -fx-background-color: transparent;
+    -fx-padding: 10px 0 0 0;
+    -fx-alignment: center;
+}
+.button-bar .button, #bar_button .button {
+    -fx-background-color: #007bff;
     -fx-text-fill: white;
+    -fx-font-size: 15px;
     -fx-font-weight: bold;
+    -fx-border-radius: 6px;
+    -fx-padding: 8px 18px;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.10), 2, 0, 0, 1);
+    -fx-cursor: hand;
+    -fx-border-color: #0056b3;
+    -fx-border-width: 1px;
+    -fx-margin: 0 8px 0 0;
 }
-
-/* Estilo para mensajes de error */
-.error-label {
-    -fx-font-size: 14px;
-    -fx-text-fill: #dc3545; /* Rojo de error */
-    -fx-font-weight: bold;
-    -fx-padding: 5px;
-    -fx-alignment: center;
+.button-bar .button:hover, #bar_button .button:hover {
+    -fx-background-color: #0056b3;
 }
-
-/* Estilo para mensajes de éxito */
-.success-label {
-    -fx-font-size: 14px;
-    -fx-text-fill: #28a745; /* Verde de éxito */
-    -fx-font-weight: bold;
-    -fx-padding: 5px;
-    -fx-alignment: center;
+.button-bar .button:pressed, #bar_button .button:pressed {
+    -fx-background-color: #003f7f;
 }
