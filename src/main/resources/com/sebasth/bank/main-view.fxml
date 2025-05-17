@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="background" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.BankController">
    <center>
       <AnchorPane fx:id="main" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <children>
@@ -24,10 +24,10 @@
                </font></Label>
             <ButtonBar fx:id="bar_button" layoutX="10.0" layoutY="92.0" prefHeight="40.0" prefWidth="580.0">
               <buttons>
-                <Button fx:id="button_1" mnemonicParsing="false" prefHeight="25.0" prefWidth="207.0" text="Ir a Billetera" />
-                  <Button fx:id="button_2" mnemonicParsing="false" text="Agregar Creditos" />
-                  <Button fx:id="button_3" mnemonicParsing="false" text="Ir a Creditos" />
-                  <Button fx:id="button_4" mnemonicParsing="false" text="Ir a usuarios" />
+                <Button fx:id="button_1" mnemonicParsing="false" prefHeight="25.0" prefWidth="207.0" text="Ir a Billetera" onAction="#navigateToWalletView"/>
+                  <Button fx:id="button_2" mnemonicParsing="false" text="Agregar Creditos"  onAction="#navigateToAddCreditCardView"/>
+                  <Button fx:id="button_3" mnemonicParsing="false" text="Ir a Creditos" onAction="#navigateToCreditCardView" />
+                  <Button fx:id="button_4" mnemonicParsing="false" text="Ir a usuarios" onAction="#navigateToUserView" />
               </buttons>
             </ButtonBar>
          </children>
