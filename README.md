@@ -20,6 +20,10 @@ bank/
 
 │   │   │   └── com/sebasth/bank/
 
+│   │   │   └── com/sebasth/bank/api
+
+│   │   │       └── CreditCardController.java
+
 │   │   │   └── com/sebasth/bank/controllers
 
 │   │   │       ├── BankController.java
@@ -92,12 +96,14 @@ bank/
 * **BootstrapFX:** Librería para aplicar estilos basados en Bootstrap a aplicaciones JavaFX.
 * **FXGL:** Motor de juegos 2D y 3D acelerado por GPU para JavaFX (puede que no se esté utilizando directamente para la interfaz bancaria, pero está incluido como dependencia).
 * **JUnit Jupiter:** Framework para escribir y ejecutar pruebas unitarias.
+* **Scene Bulder** Programa para diseñar las vistas con interfaz grafica
+* ***Postman** Pruebas de conexion a API´S
 
 ## Cómo Empezar
 
 1.  **Clonar el repositorio (si aplica).**
 2.  **Asegurarse de tener instalado un JDK (Java Development Kit) compatible con Java 21.**
-3.  **Navegar al directorio raíz del proyecto (`step2`).**
+3.  **Navegar al directorio raíz del proyecto (`bank`).**
 4.  **Ejecutar la aplicación utilizando Maven:**
 
     ```bash
@@ -116,11 +122,11 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 
 ### 1. Crear Vistas Internas Dinámicas
 
-* **Archivos `.fxml` (en `src/main/resources/com/sebasth/step2/`):**
+* **Archivos `.fxml` (en `src/main/resources/com/sebasth/bank/`):**
     * Crea nuevos archivos `.fxml` para definir la estructura visual de cada vista interna (e.g., `account-details.fxml`, `transfer-funds.fxml`).
     * Modifica el archivo de la vista principal (`hello-view.fxml` o crea uno nuevo) para incluir un contenedor (como `BorderPane`, `StackPane`) donde se cargarán dinámicamente estas vistas. Añade elementos de navegación (botones, menú) para cambiar entre vistas.
 
-* **Archivos `.java` (controladores en `src/main/java/com/sebasth/step2/`):**
+* **Archivos `.java` (controladores en `src/main/java/com/sebasth/bank/`):**
     * Crea controladores Java (`.java`) correspondientes a cada nuevo archivo `.fxml`. Estos controladores manejarán la lógica y la interacción del usuario para sus respectivas vistas (e.g., `AccountDetailsController.java`, `TransferFundsController.java`).
     * Modifica `SistemBank.java` o el controlador de la vista principal para implementar la lógica de carga y reemplazo de las vistas dentro del contenedor principal utilizando `FXMLLoader`.
 
@@ -140,7 +146,7 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 * **Controladores (`.java` en `src/main/java/com/sebasth/bank/`):**
     * Implementa la lógica de la aplicación en los métodos de tus controladores. Utiliza anotaciones `@FXML` para enlazar elementos de la interfaz con variables y métodos Java.
     * Maneja eventos de usuario (clics de botones, entrada de texto) y actualiza la interfaz de usuario en respuesta.
-    * взаимодействуй con las clases de modelo (como `CrediCart`, `Wallet`, `User`) para realizar operaciones y gestionar datos.
+    * Metodos con las clases de modelo (como `CrediCart`, `Wallet`, `User`) para realizar operaciones y gestionar datos.
 
 * **Clases de Modelo (`.java` en `src/main/java/com/sebasth/bank/model/` - crea este paquete):**
     * Crea clases Java para representar las entidades de tu dominio (e.g., `CrediCart`, `Wallet`, `User`). Define sus atributos y comportamientos (métodos).
@@ -160,3 +166,4 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 * Desarrollar las funcionalidades principales de la aplicación en los controladores.
 * Aplicar estilos CSS para mejorar la apariencia visual.
 * Escribir pruebas unitarias para asegurar la correcta funcionalidad de la aplicación.
+* Conectar a API´S
