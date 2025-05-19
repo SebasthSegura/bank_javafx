@@ -6,9 +6,9 @@ Este proyecto es una aplicación de escritorio desarrollada con JavaFX para la g
 
 bank/
 
-├── .idea/                     # Configuración de IntelliJ IDEA 
+├── .idea/                   
 
-├── .mvn/                       # Archivos de Maven Wrapper
+├── .mvn/                       
 
 │   └── ...
 
@@ -30,6 +30,10 @@ bank/
 
 │   │   │       ├── AddCreditCardController.java
 
+│   │   │       ├── LoginController.java
+
+│   │   │       ├── RegisterController.java
+
 │   │   │       ├── UserController.java
 
 │   │   │       ├── WalleController.java
@@ -43,6 +47,10 @@ bank/
 │   │   │       ├── Loan.java
 
 │   │   │       ├── Role.java
+
+│   │   │       ├── Register.java
+
+│   │   │       ├── Login.java
 
 │   │   │       ├── Wallet.java    
 
@@ -67,6 +75,10 @@ bank/
 │   │           └── user-view.fxml 
 
 │   │           └── wallet-view.fxml
+
+│   │           └── login-view.fxml
+
+│   │           └── register-view.fxml
 
 │   │           └── add-credit-cardts.fxml
 
@@ -97,7 +109,8 @@ bank/
 * **FXGL:** Motor de juegos 2D y 3D acelerado por GPU para JavaFX (puede que no se esté utilizando directamente para la interfaz bancaria, pero está incluido como dependencia).
 * **JUnit Jupiter:** Framework para escribir y ejecutar pruebas unitarias.
 * **Scene Bulder** Programa para diseñar las vistas con interfaz grafica
-* ***Postman** Pruebas de conexion a API´S
+* **Postman** Pruebas de conexion a API´S
+* **MYSQL WORKBENCH** Gestion de base de datos
 
 ## Cómo Empezar
 
@@ -132,7 +145,7 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 
 ### 2. Dar Estilo con CSS
 
-* **Archivos `.css` (en `src/main/resources/com/sebasth/step2/` o una subcarpeta como `css/`):**
+* **Archivos `.css` (en `src/main/resources/com/sebasth/bank/` o una subcarpeta como `css/`):**
     * Crea uno o varios archivos `.css` (e.g., `styles.css`, `theme.css`) para definir los estilos visuales de tu aplicación.
 
 * **Enlazar hojas de estilo en `SistemBank.java`:**
@@ -167,3 +180,4 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 * Aplicar estilos CSS para mejorar la apariencia visual.
 * Escribir pruebas unitarias para asegurar la correcta funcionalidad de la aplicación.
 * Conectar a API´S
+* Conectar a base de datos
