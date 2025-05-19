@@ -1,33 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
 
-<?import javafx.scene.chart.AreaChart?>
-<?import javafx.scene.chart.CategoryAxis?>
-<?import javafx.scene.chart.NumberAxis?>
-<?import javafx.scene.control.ScrollPane?>
-<?import javafx.scene.control.SplitPane?>
-<?import javafx.scene.layout.*?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.WalletController">
-   <children>
-      <ScrollPane layoutY="7.0" prefHeight="400.0" prefWidth="601.0">
-        <content>
-          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="400.0" prefWidth="246.0">
-               <children>
-                  <SplitPane dividerPositions="0.5" layoutY="6.0" prefHeight="200.0" prefWidth="588.0" AnchorPane.bottomAnchor="194.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-342.0" AnchorPane.topAnchor="6.0">
-                     <items>
-                        <AreaChart>
-                          <xAxis>
-                            <CategoryAxis side="BOTTOM" />
-                          </xAxis>
-                          <yAxis>
-                            <NumberAxis side="LEFT" />
-                          </yAxis>
-                        </AreaChart>
-                     </items>
-                  </SplitPane>
-               </children>
-            </AnchorPane>
-        </content>
-      </ScrollPane>
-   </children>
-</AnchorPane>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <right>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </right>
+   <left>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableInfo" prefHeight="200.0" prefWidth="600.0">
+              <columns>
+                <TableColumn fx:id="credit_Info" prefWidth="75.0" text="Creditos" />
+                <TableColumn fx:id="loan_Info" prefWidth="75.0" text="Prestamos" />
+                  <TableColumn fx:id="wallet_Info" prefWidth="75.0" text="Ahorro" />
+              </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+   </left>
+   <top>
+      <AnchorPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcomeLabel" layoutX="248.0" layoutY="14.0" prefHeight="27.0" prefWidth="104.0" text="CARTERA" textAlignment="CENTER">
+               <font>
+                  <Font name="Arial Black" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="infoLabel" layoutX="8.0" layoutY="149.0" prefHeight="24.0" prefWidth="89.0" text="Informacion: ">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="search" layoutX="359.0" layoutY="15.0" prefHeight="25.0" prefWidth="200.0" promptText="Buscar">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+            </TextField>
+            <Button fx:id="bSearch" layoutX="559.0" layoutY="15.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="36.0" text="🔎" />
+         </children>
+      </AnchorPane>
+   </top>
+   <bottom>
+      <AnchorPane prefHeight="53.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="footer_Info" layoutX="216.0" layoutY="18.0" prefHeight="17.0" prefWidth="169.0" text="Desarrollado por Juan Segura" textFill="#ddd9d9" />
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>
