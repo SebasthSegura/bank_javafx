@@ -12,14 +12,7 @@ public class Login {
         this.email = email;
     }
 
-    // Constructor por defecto
-    public Login() {
-        this.userName = "";
-        this.password = "";
-        this.email = "";
-    }
-
-    // Getters y Setters
+    // agregamos los getters y Setters
     public String getUserName() {
         return userName;
     }
@@ -44,6 +37,17 @@ public class Login {
         this.email = email;
     }
 
+    /*agregamos los metodos para manipular el login*/
+    public void loginUser() {
+        // agegamos la logica para iniciar sesión
+        System.out.println("Iniciando sesión para el usuario: " + userName);
+    }
+    public void logoutUser() {
+        // agegamos la logica para cerrar sesión
+        System.out.println("Cerrando sesión para el usuario: " + userName);
+    }
+
+    /*sobreescribimos los metodos ****/
     @Override
     public String toString() {
         return "Login{" +
