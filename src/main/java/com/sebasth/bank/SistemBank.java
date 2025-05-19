@@ -1,5 +1,6 @@
 package com.sebasth.bank;
 
+import com.sebasth.bank.controllers.BankController;
 import com.sebasth.bank.controllers.CreditCardController;
 import com.sebasth.bank.controllers.UserController;
 import com.sebasth.bank.objects.CreditCard;
@@ -33,6 +34,10 @@ public class SistemBank extends Application {
         /*llamamos nuestra variable mainPane para que sea igual a lo que contiene mainPanel y lo cargue
          con la funcion load()*/
         mainPane = mainPanel.load();
+
+        // configurar el controlador
+                BankController controlador = mainPanel.getController();
+                controlador.setMainApp(this);
 
         //damos parametros de tamaño
         Scene scene = new Scene(mainPane, 320, 240);

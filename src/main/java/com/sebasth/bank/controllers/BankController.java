@@ -16,7 +16,10 @@ public class BankController {
     @FXML
     private Label bankLabelText;
     private Label serviceLabelText;
+
+    @FXML
     private AnchorPane mainPane;
+
     private SistemBank mainApp;
     private User currentUser;
 
@@ -29,6 +32,11 @@ public class BankController {
 
     @FXML
     public void initialize() {
+        if (mainPane == null) {
+            System.out.println("mainPane no está inicializado.");
+        } else {
+            System.out.println("mainPane inicializado correctamente.");
+        }
         bankLabelText.setText("Bienvenido a MeBank");
     }
 
