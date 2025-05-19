@@ -181,3 +181,5 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 * Escribir pruebas unitarias para asegurar la correcta funcionalidad de la aplicación.
 * Conectar a API´S
 * Conectar a base de datos
+
+![Captura de pantalla de Login](assets/Login.jpg)
