@@ -1,8 +1,10 @@
 package com.sebasth.bank.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import com.sebasth.bank.objects.Login;
+import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.awt.*;
 
@@ -10,29 +12,47 @@ import java.awt.*;
 public class LoginController {
 
     @FXML
-    private javafx.scene.control.TextField passwordTextField;
+    private TextField userNameLabel, emailLabel;
 
     @FXML
-    private javafx.scene.control.TextField userNameTextField;
+    private PasswordField passwordField;
 
     @FXML
-    private javafx.scene.control.TextField emailTextField;
+    private Button bLogin, bRegister;
 
     @FXML
-    private Button loginButton;
+    private void init() {
+        bLogin.setOnAction(event -> handleLogin());
+    }
 
-    @FXML
-    private Button registerButton;
+    private void handleLogin() {
+        Login login = new Login(
+                userNameLabel.getText(),
+                passwordField.getText(),
+                emailLabel.getText()
+        );
 
-    @FXML
-    private void handleLoginAction() {
-        String userName = userNameTextField.getText();
-        String password = passwordTextField.getText();
-        String email = emailTextField.getText();
+        /*Validamos las credenciales*/
+        if (login.getUserName().isEmpty() || login.getPassword().isEmpty()) {
+            showAlert("Error", "Por favor, ingrese su nombre de usuario y contraseña.");
+            return;
+        } else {
+            showAlert("Ingreso exitoso", "Bienvenido " + login.getUserName() + "!");
+        }
+    }
 
-        // Manipular el inicio de sesion
-        System.out.println("Usuario: " + userName);
-        System.out.println("Contraseña: " + password);
-        System.out.println("Email: " + email);
+    private void showAlert(String title, String message) {
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setTitle(title);
+        alert.setHeaderText(null);
+        alert.setContentText(message);
+        alert.showAndWait();
+    }
+
+    private boolean validateUser(Login login) {
+        /*
+        insertaremos aquí las validaciones a la base de datos para validar el usuario o una lista
+         */
+        return "usuario".equals(login.getUserName()) && "1234".equals(login.getPassword());
     }
 }
