@@ -184,18 +184,27 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 
 ## Vista de la Aplicación
 * **Vista Principal**
+##
+
 ![Captura de la vista de la vista principal](src/main/resources/com/sebasth/bank/assets/main.png)
 
 * **Login**
+##
+
 ![Captura de pantalla de la vista del Login](src/main/resources/com/sebasth/bank/assets/Login.jpg)
 
 * **Registro**
+##
+
 ![Captura de pantalla de la vista de Registro](src/main/resources/com/sebasth/bank/assets/register.png)
 
 * **Añadir creditos**
+##
+
 ![Captura de pantalla de la vista de Busqueda de creditos](src/main/resources/com/sebasth/bank/assets/add-credit-card.png)
 
 * **Cartera**
+##
 ![Captura de pantalla de la vista de Cartera](src/main/resources/com/sebasth/bank/assets/wallet.png)
 
 ###### (las vistas se iran actualizando a medida que se vayan añadiendo nuevas funcionalidades)
