@@ -184,7 +184,7 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 
 ## Vista de la Aplicación
 * **Vista Principal**
-![main.png](src/main/resources/com/sebasth/bank/assets/main.png)
+![Captura de la vista de la vista principal](src/main/resources/com/sebasth/bank/assets/main.png)
 * **Login**
 ![Captura de pantalla de la vista del Login](src/main/resources/com/sebasth/bank/assets/Login.jpg)
 
