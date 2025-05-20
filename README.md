@@ -207,5 +207,9 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 ##
 ![Captura de pantalla de la vista de Cartera](src/main/resources/com/sebasth/bank/assets/wallet.png)
 
+* **Usuaro**
+##
+![Captura de pantalla de la vista de Usuario](src/main/resources/com/sebasth/bank/assets/user.png)
+
 ###### (las vistas se iran actualizando a medida que se vayan añadiendo nuevas funcionalidades)
 
