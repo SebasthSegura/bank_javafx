@@ -211,5 +211,10 @@ Para extender y personalizar la aplicación, puedes modificar los siguientes arc
 ##
 ![Captura de pantalla de la vista de Usuario](src/main/resources/com/sebasth/bank/assets/user.png)
 
+* **Creditos**
+
+##
+![Captura de pantalla de la vista de Credito](src/main/resources/com/sebasth/bank/assets/creditCard.png)
+
 ###### (las vistas se iran actualizando a medida que se vayan añadiendo nuevas funcionalidades)
 
