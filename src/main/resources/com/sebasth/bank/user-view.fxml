@@ -2,68 +2,74 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.Menu?>
-<?import javafx.scene.control.MenuBar?>
-<?import javafx.scene.control.MenuItem?>
-<?import javafx.scene.control.Slider?>
-<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox fx:id="background" prefHeight="332.0" prefWidth="535.0" spacing="10" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.UserController">
-   <BorderPane prefHeight="200.0" prefWidth="200.0">
-      <top>
-         <MenuBar fx:id="manu_bar" prefHeight="16.0" prefWidth="503.0" BorderPane.alignment="CENTER">
-           <menus>
-             <Menu mnemonicParsing="false" text="File">
-               <items>
-                 <MenuItem mnemonicParsing="false" text="Close" />
-                     <MenuItem mnemonicParsing="false" text="Unspecified Action" />
-               </items>
-             </Menu>
-             <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                 <MenuItem mnemonicParsing="false" text="Delete" />
-               </items>
-             </Menu>
-             <Menu mnemonicParsing="false" text="Help">
-               <items>
-                 <MenuItem mnemonicParsing="false" text="About" />
-               </items>
-             </Menu>
-           </menus>
-         </MenuBar>
-      </top>
-      <center>
-         <TitledPane fx:id="menu_user" animated="false" text="Usuarios" BorderPane.alignment="CENTER">
-           <content>
-             <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                  <children>
-                     <Label fx:id="h1_label" layoutY="2.0" prefHeight="25.0" prefWidth="64.0" text="Valores:">
-                        <font>
-                           <Font size="16.0" />
-                        </font>
-                     </Label>
-                  </children>
-               </AnchorPane>
-           </content>
-         </TitledPane>
-      </center>
-      <right>
-         <Slider orientation="VERTICAL" BorderPane.alignment="CENTER" />
-      </right>
-   </BorderPane>
 
-    <Label fx:id="userNameLabel" text="Usuario: " />
-    <Label fx:id="walletBalanceLabel" text="Saldo: $0.00" />
-
-    <HBox alignment="CENTER" spacing="5">
-    <Button fx:id="buttons_deposit" onAction="#handleDepositButtonAction" text="Depositar" />
-    <Button fx:id="buttons_withdraw" onAction="#handleWithdrawButtonAction" text="Retirar" />
-    </HBox>
-   <AnchorPane prefHeight="31.0" prefWidth="504.0" />
-
-</VBox>
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.UserController">
+   <top>
+      <AnchorPane prefHeight="47.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="welcomeLabel" layoutX="14.0" layoutY="15.0" prefHeight="17.0" prefWidth="111.0" text="Usuario">
+               <font>
+                  <Font name="Arial Black" size="19.0" />
+               </font>
+            </Label>
+            <Button fx:id="bBack" layoutX="567.0" layoutY="11.0" mnemonicParsing="false" text="&lt;">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </top>
+   <left>
+      <AnchorPane prefHeight="312.0" prefWidth="264.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="nameInfo" layoutX="3.0" layoutY="41.0" prefHeight="17.0" prefWidth="60.0" text="Nombre:" />
+            <Label fx:id="textH1" layoutX="2.0" layoutY="6.0" prefHeight="17.0" prefWidth="50.0" text="Datos">
+               <font>
+                  <Font name="Arial Black" size="12.0" />
+               </font>
+            </Label>
+            <Label fx:id="lastNameInfo" layoutX="2.0" layoutY="68.0" prefHeight="17.0" prefWidth="60.0" text="Apellido:" />
+            <Label fx:id="ageInfo" layoutX="2.0" layoutY="94.0" prefHeight="17.0" prefWidth="60.0" text="Edad: " />
+            <Label fx:id="numberIdInfo" layoutX="3.0" layoutY="122.0" prefHeight="17.0" prefWidth="96.0" text="No Identificacion:" />
+            <Label fx:id="userInfo" layoutX="3.0" layoutY="153.0" prefHeight="17.0" prefWidth="96.0" text="Usuario:" />
+            <Label fx:id="emailInfo" layoutX="3.0" layoutY="185.0" prefHeight="17.0" prefWidth="96.0" text="Correo: " />
+            <Button fx:id="bUpdate" layoutX="3.0" layoutY="226.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="75.0" text="Actualizar" />
+            <TextField fx:id="nameInfoText" layoutX="63.0" layoutY="35.0" />
+            <TextField fx:id="lastNameInfoText" layoutX="63.0" layoutY="63.0" />
+            <TextField fx:id="ageInfoText" layoutX="63.0" layoutY="91.0" />
+            <TextField fx:id="numberIdInfoText" layoutX="107.0" layoutY="119.0" />
+            <TextField fx:id="userInfoText" layoutX="66.0" layoutY="150.0" prefHeight="25.0" prefWidth="177.0" />
+            <TextField fx:id="emailInfoText" layoutX="62.0" layoutY="182.0" prefHeight="25.0" prefWidth="183.0" />
+         </children>
+      </AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="213.0" prefWidth="355.0" BorderPane.alignment="CENTER">
+         <children>
+            <TextArea fx:id="descriptionInfo" layoutX="6.0" layoutY="25.0" prefHeight="239.0" prefWidth="290.0" />
+            <Label fx:id="descriptionLabel" layoutX="8.0" layoutY="6.0" prefHeight="17.0" prefWidth="74.0" text="Descripcion:" />
+         </children>
+      </AnchorPane>
+   </center>
+   <right>
+      <AnchorPane prefHeight="153.0" prefWidth="46.0" BorderPane.alignment="CENTER" />
+   </right>
+   <bottom>
+      <AnchorPane prefHeight="41.0" prefWidth="600.0" style="-fx-background-color: black;" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="footer_Info" layoutX="225.0" layoutY="6.0" prefHeight="17.0" prefWidth="151.0" text="Desarrollado por Juan Segura" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="11.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </bottom>
+</BorderPane>

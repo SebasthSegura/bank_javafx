@@ -1,10 +1,13 @@
 package com.sebasth.bank.objects;
 
+import kotlin.random.URandomKt;
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
 public class User {
+    private Long userId;
     private String userName;
     private String firstName;
     private String lastName;
@@ -23,6 +26,7 @@ public class User {
 
     // constructor para crear un usuario con todos los datos
     public User(Long userId, String userName, String firstName, String lastName, List<CreditCard> creditCards, int age, String numberId, double walletBalance) {
+        this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
         this.lastName = lastName;
