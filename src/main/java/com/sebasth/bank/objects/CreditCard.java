@@ -106,7 +106,7 @@ public class CreditCard {
         }
     }
 
-    /*sobre escribimos los metodos equals, hash y toString para verificar si la tarjeta es valida*/
+    /*sobreescribimos los metodos equals, hash y toString para verificar si la tarjeta es validar*/
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;

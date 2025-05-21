@@ -99,4 +99,28 @@ public class BankController {
         // Lógica adicional, como cambiar de vista o realizar una operación
         System.out.println("Servicio de banco activado");
     }
+
+    @FXML
+    private  void navegateToLoginView(){
+        if (mainApp != null){
+            mainPane.getChildren().clear();
+            try {
+                mainApp.showLoginView();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    private void navegateToRegisterView(){
+        if (mainApp != null){
+            mainPane.getChildren().clear();
+            try {
+                mainApp.showRegisterView();
+            }catch (IOException e){
+                e.printStackTrace();
+            }
+        }
+    }
 }

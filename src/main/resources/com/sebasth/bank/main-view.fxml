@@ -18,8 +18,8 @@
                <font>
                   <Font name="Arial Black" size="18.0" />
                </font></Label>
-            <Button fx:id="bLogin" layoutX="96.0" layoutY="301.0" mnemonicParsing="false" text="Login" />
-            <Button fx:id="bRegister" layoutX="7.0" layoutY="301.0" mnemonicParsing="false" text="Ir a Registro" />
+            <Button fx:id="bLogin" layoutX="96.0" layoutY="301.0" mnemonicParsing="false" text="Login" onAction="#navegateToLoginView"/>
+            <Button fx:id="bRegister" layoutX="7.0" layoutY="301.0" mnemonicParsing="false" text="Ir a Registro" onAction="#navegateToRegisterView"/>
          </children>
       </AnchorPane>
    </center>

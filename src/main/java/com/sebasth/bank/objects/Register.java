@@ -10,7 +10,6 @@ public class Register {
     private String repeatedPassword;
 
     /*Constructores para poder ingresar registros y mandarlos a user*/
-
     public Register(String firstName, String lastName, String userName, String email, String password, String repeatedPassword) {
         this.firstName = firstName;
         this.lastName = lastName;
@@ -29,8 +28,6 @@ public class Register {
         }
     }
     //agregampos los getters y setters
-
-
     public long getUserId() {
         return userId;
     }
