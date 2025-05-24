@@ -10,6 +10,12 @@ public class DataBaseConnection {
     private String username;
     private String password;
 
+    public void main(String[] args) {
+        // ejemplo de uso de la clase DataBaseConnection
+        DataBaseConnection dbConnection = new DataBaseConnection("jdbc:mysql://localhost:3306/mydatabase", "user", "password");
+        dbConnection.insertUser("John Doe", "");
+        }
+
     public DataBaseConnection(String jbcUrl, String username, String password) {
         this.jbcUrl = jbcUrl;
         this.username = username;
