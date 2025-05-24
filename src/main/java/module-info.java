@@ -12,6 +12,7 @@ module com.sebasth.bank {
     requires org.json.chargebee;
     requires com.fasterxml.jackson.databind;
     requires java.desktop;
+    requires java.sql;
 
     opens com.sebasth.bank to javafx.fxml;
     exports com.sebasth.bank;
