@@ -142,6 +142,9 @@ public void showLoginView() throws IOException {
     //llamamos el controlador
     LoginController controller = loader.getController();
 
+
+    loginPane.getStylesheets().add(getClass().getResource("styles/LoginStyle.css").toExternalForm());
+
     //añadimos nuestra nueva variable al controlador como parametro principal
 
     //limpamos el contenedor principal para llamar una nueva vista
