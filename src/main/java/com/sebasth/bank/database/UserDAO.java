@@ -26,8 +26,8 @@ public class UserDAO {
             resultSet = statement.executeQuery();
             if (resultSet.next()) {
                 User user = new User();
-                user.setId(resultSet.getInt("id"));
-                user.setUsername(resultSet.getString("username"));
+                user.setUserId((long) resultSet.getInt("id"));
+                user.setUserName(resultSet.getString("username"));
                 return user;
             }
             return null;

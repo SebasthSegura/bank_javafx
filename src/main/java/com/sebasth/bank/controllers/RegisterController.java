@@ -7,8 +7,6 @@ import com.sebasth.bank.objects.User;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert;
 
-import java.util.concurrent.ThreadLocalRandom;
-
 public class RegisterController {
     @FXML
     private TextField nameLabel, lasNameLabel, userNameLabel, emailLabel;
@@ -42,14 +40,6 @@ public class RegisterController {
 
        /*creamos un objeto user apartir del registro*/
        User newUser = new User(
-               ThreadLocalRandom.current().nextLong(1, 611211),
-               register.getUserName(),
-               register.getFirstName(),
-               register.getLastName(),
-               null,
-               0,
-               "1212",
-               0.0
        );
 
        /*ponemos un alerta que se guardo el usuario*/

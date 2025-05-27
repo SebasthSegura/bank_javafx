@@ -1,7 +1,5 @@
 package com.sebasth.bank.objects;
 
-import kotlin.random.URandomKt;
-
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
@@ -25,7 +23,7 @@ public class User {
     }
 
     // constructor para crear un usuario con todos los datos
-    public User(Long userId, String userName, String firstName, String lastName, List<CreditCard> creditCards, int age, String numberId, double walletBalance) {
+    public User() {
         this.userId = userId;
         this.userName = userName;
         this.firstName = firstName;
@@ -66,6 +64,10 @@ public class User {
         return walletBalance;
     }
 
+    public Long getUserId() {
+        return userId;
+    }
+
     //setter para poder modificar los datos del usuario
 
 
@@ -97,6 +99,9 @@ public class User {
         this.walletBalance = walletBalance;
     }
 
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 
     //metodo para añadir al usuario una card y los parametros que recibira.
     public void addCreditCard(CreditCard card){
