@@ -1,0 +1,60 @@
+.root { /* Style the root BorderPane */
+    -fx-background-color: #f0f0f0; /* Light gray background */
+}
+
+.vbox { /* Style the main VBox in the center */
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+    -fx-padding: 20px;
+}
+
+.image-view { /* Style the ImageView */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 5, 0, 0, 5); /* Add a subtle shadow */
+}
+
+.label { /* Style all labels */
+    -fx-font-size: 14px;
+    -fx-text-fill: #333; /* Dark gray text */
+}
+
+#welcome_TextLabel { /* Style the LOGIN label specifically */
+    -fx-font-size: 28px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #007bff; /* Blue color */
+    -fx-margin-bottom: 10px;
+}
+
+.text-field, .password-field { /* Style text fields and password fields */
+    -fx-border-color: #ccc;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px;
+}
+
+.check-box { /* Style the checkbox */
+    -fx-padding: 5px;
+}
+
+.hyperlink { /* Style the hyperlink */
+    -fx-text-fill: #007bff;
+}
+
+.button { /* Style all buttons */
+    -fx-background-color: #007bff; /* Blue background */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 8px 15px;
+    -fx-border-radius: 5px;
+    -fx-cursor: hand; /* Change cursor on hover */
+}
+
+.button:hover { /* Style buttons on hover */
+    -fx-background-color: #0056b3; /* Darker blue */
+}
+
+#stck_back { /* Style the black AnchorPane on the right */
+    -fx-background-color: black;
+}
+
+#img_login { /* Style the ImageView within the black pane (if needed) */
+    /* You can add specific styles here if you load an image */
+}
