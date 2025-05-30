@@ -10,9 +10,9 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.BankController">
+<BorderPane fx:id="mainPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="666.0" prefWidth="898.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.BankController">
    <center>
-      <AnchorPane fx:id="mainPane" prefHeight="352.0" prefWidth="300.0" BorderPane.alignment="CENTER">
+      <AnchorPane prefHeight="352.0" prefWidth="300.0" BorderPane.alignment="CENTER">
          <children>
             <Label fx:id="bankLabelText" layoutX="173.0" prefHeight="50.0" prefWidth="120.0" text="MeBank" textAlignment="CENTER">
                <font>

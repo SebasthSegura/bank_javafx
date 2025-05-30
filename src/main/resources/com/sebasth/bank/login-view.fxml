@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sebasth.bank.controllers.LoginController">
    <center>
       <AnchorPane prefHeight="1063.0" prefWidth="1143.0" BorderPane.alignment="CENTER">
          <children>
@@ -40,7 +40,7 @@
                   </ImageView>
                   <CheckBox fx:id="check" layoutX="30.0" layoutY="337.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="98.0" text="Aceptar" />
                   <Button fx:id="bLogg" layoutX="30.0" layoutY="377.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="104.0" text="Ingresar" />
-                  <Button fx:id="bRegister" layoutX="142.0" layoutY="376.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="118.0" text="Registrarse" />
+                  <Button fx:id="bRegister" layoutX="142.0" layoutY="376.0" mnemonicParsing="false" onAction="#navegateToRegister" prefHeight="25.0" prefWidth="118.0" text="Registrarse" />
                   <Hyperlink fx:id="restart_password" layoutX="136.0" layoutY="335.0" prefHeight="23.0" prefWidth="167.0" text="Restablecer Contraseña" />
                </children>
             </AnchorPane>

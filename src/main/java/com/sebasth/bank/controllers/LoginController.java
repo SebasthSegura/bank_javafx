@@ -1,11 +1,15 @@
 package com.sebasth.bank.controllers;
 
+import com.sebasth.bank.SistemBank;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import com.sebasth.bank.objects.Login;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
+
 import java.awt.*;
 
 
@@ -13,6 +17,11 @@ public class LoginController {
 
     @FXML
     private TextField userNameLabel, emailLabel;
+
+    @FXML
+    private BorderPane mainPane;
+
+    private SistemBank mainApp;
 
     @FXML
     private PasswordField passwordField;
@@ -54,5 +63,16 @@ public class LoginController {
         insertaremos aquí las validaciones a la base de datos para validar el usuario o una lista
          */
         return "usuario".equals(login.getUserName()) && "1234".equals(login.getPassword());
+    }
+    @FXML
+    private void navegateToRegister(){
+        if (mainApp != null){
+            mainPane.getChildren().clear();
+            try {
+                mainApp.showRegisterView();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
     }
 }

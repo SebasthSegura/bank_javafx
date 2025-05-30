@@ -6,6 +6,7 @@ import com.sebasth.bank.objects.CreditCard;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.Node;
 import javafx.scene.control.Button;
@@ -18,9 +19,10 @@ public class BankController {
     private Label serviceLabelText;
 
     @FXML
-    private AnchorPane mainPane;
+    private BorderPane mainPane;
 
     private SistemBank mainApp;
+
     private User currentUser;
 
     public void setMainApp(SistemBank mainApp){
