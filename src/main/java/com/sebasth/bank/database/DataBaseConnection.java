@@ -2,7 +2,6 @@ package com.sebasth.bank.database;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.SQLDataException;
 import java.sql.SQLException;
 
 public class DataBaseConnection {
@@ -32,7 +31,7 @@ public class DataBaseConnection {
         if (connection != null){
             try {
                 connection.rollback();
-                System.out.println("Transaction rolled bacck successfully.");
+                System.out.println("Transaction rolled back successfully.");
             } catch (SQLException e) {
                 System.out.println("Error rolling back transaction: " + e.getMessage());
             }

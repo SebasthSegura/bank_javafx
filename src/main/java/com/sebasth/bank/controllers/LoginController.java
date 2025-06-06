@@ -64,10 +64,14 @@ public class LoginController {
          */
         return "usuario".equals(login.getUserName()) && "1234".equals(login.getPassword());
     }
+
+    public void setMainApp(SistemBank mainApp) {
+        this.mainApp = mainApp;
+    }
+
     @FXML
-    private void navegateToRegister(){
+    private void navigateToRegisterView(){
         if (mainApp != null){
-            mainPane.getChildren().clear();
             try {
                 mainApp.showRegisterView();
             } catch (Exception e) {

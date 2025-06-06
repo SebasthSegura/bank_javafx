@@ -1,9 +1,6 @@
 package com.sebasth.bank;
 
-import com.sebasth.bank.controllers.BankController;
-import com.sebasth.bank.controllers.CreditCardController;
-import com.sebasth.bank.controllers.LoginController;
-import com.sebasth.bank.controllers.UserController;
+import com.sebasth.bank.controllers.*;
 import com.sebasth.bank.objects.CreditCard;
 import com.sebasth.bank.objects.User;
 import javafx.application.Application;
@@ -130,17 +127,18 @@ public void showWalletView(User wallet) throws IOException {
     //añadimos nuestra nueva variable al controlador como parametro principal
     userController.setUser(wallet);
 
-    //limpamos el contenedor principal para llamar una nueva vista
+    //limpiamos el contenedor principal para llamar una nueva vista
     mainPane.getChildren().clear();
     mainPane.getChildren().add(walletPane);
 }
 
 public void showLoginView() throws IOException {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("login-view.fxml"));
-    javafx.scene.layout.BorderPane loginPane = loader.load();
+    BorderPane loginPane = loader.load();
 
     //llamamos el controlador
     LoginController controller = loader.getController();
+    controller.setMainApp(this);
 
 
     loginPane.getStylesheets().add(getClass().getResource("styles/LoginStyle.css").toExternalForm());
@@ -157,7 +155,7 @@ public void showRegisterView() throws IOException {
     javafx.scene.layout.BorderPane registerPane = loader.load();
 
     //llamamos el controlador
-    LoginController controller = loader.getController();
+    RegisterController controller = loader.getController();
 
 
     //limpamos el contenedor principal para llamar una nueva vista

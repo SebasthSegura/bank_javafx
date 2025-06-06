@@ -2,6 +2,7 @@ package com.sebasth.bank.controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.TextField;
+import com.sebasth.bank.SistemBank;
 import com.sebasth.bank.objects.Register;
 import com.sebasth.bank.objects.User;
 import javafx.scene.control.*;
@@ -15,11 +16,17 @@ public class RegisterController {
     private PasswordField passwordLabel, repeatPasswordLabel;
 
     @FXML
+    private SistemBank mainApp;
+
+    @FXML
     private Button bRegister;
 
     @FXML
     private void init() {
         bRegister.setOnAction(event -> handleRegister());
+    }
+    public void setMainApp(SistemBank mainApp) {
+        this.mainApp = mainApp;
     }
 
     private void handleRegister(){
@@ -52,5 +59,4 @@ public class RegisterController {
         alert.setContentText(mensaje);
         alert.showAndWait();
     }
-
 }
