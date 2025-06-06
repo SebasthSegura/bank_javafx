@@ -39,7 +39,6 @@ public class BankController {
         } else {
             System.out.println("mainPane inicializado correctamente.");
         }
-        bankLabelText.setText("Bienvenido a MeBank");
     }
 
     @FXML

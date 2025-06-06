@@ -8,6 +8,8 @@ import com.sebasth.bank.objects.User;
 import javafx.scene.control.*;
 import javafx.scene.control.Alert;
 
+import java.io.IOException;
+
 public class RegisterController {
     @FXML
     private TextField nameLabel, lasNameLabel, userNameLabel, emailLabel;
@@ -28,7 +30,6 @@ public class RegisterController {
     public void setMainApp(SistemBank mainApp) {
         this.mainApp = mainApp;
     }
-
     private void handleRegister(){
         Register register = new Register(
                 nameLabel.getText(),
@@ -58,5 +59,17 @@ public class RegisterController {
         alert.setHeaderText(null);
         alert.setContentText(mensaje);
         alert.showAndWait();
+    }
+    @FXML
+    private void navegateToLogin(){
+        if (mainApp != null){
+            try {
+                mainApp.showLoginView();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }else {
+            showAlert("Error", "No se pudo navegar a la vista de inicio de sesión.");
+        }
     }
 }

@@ -85,7 +85,7 @@ public class SistemBank extends Application {
     /*Vista Usuario*/
     public void showUserView(User user) throws IOException{
         FXMLLoader loader = new FXMLLoader(getClass().getResource("user-view.fxml"));
-        javafx.scene.layout.VBox userPane = loader.load();
+        BorderPane userPane = loader.load();
 
         //llamamos el controlador
         UserController userController= loader.getController();
@@ -98,8 +98,8 @@ public class SistemBank extends Application {
         mainPane.getChildren().add(userPane);
     }
 
-/*Vista añadir tarjetas de credito*/
-public void showAddCreditCardView(CreditCard credit) throws IOException {
+    /*Vista añadir tarjetas de credito*/
+    public void showAddCreditCardView(CreditCard credit) throws IOException {
 
     FXMLLoader loader = new FXMLLoader(getClass().getResource("add-Credit-Card-view.fxml"));
     javafx.scene.layout.AnchorPane addCreditCardPane = loader.load();
@@ -115,8 +115,8 @@ public void showAddCreditCardView(CreditCard credit) throws IOException {
     mainPane.getChildren().add(addCreditCardPane);
 }
 
-/*Vista Cartera*/
-public void showWalletView(User wallet) throws IOException {
+    /*Vista Cartera*/
+    public void showWalletView(User wallet) throws IOException {
 
     FXMLLoader loader = new FXMLLoader(getClass().getResource("wallet-view.fxml"));
     javafx.scene.layout.AnchorPane walletPane = loader.load();
@@ -132,7 +132,7 @@ public void showWalletView(User wallet) throws IOException {
     mainPane.getChildren().add(walletPane);
 }
 
-public void showLoginView() throws IOException {
+    public void showLoginView() throws IOException {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("login-view.fxml"));
     BorderPane loginPane = loader.load();
 
@@ -150,12 +150,13 @@ public void showLoginView() throws IOException {
     mainPane.getChildren().add(loginPane);
 }
 
-public void showRegisterView() throws IOException {
+    public void showRegisterView() throws IOException {
     FXMLLoader loader = new FXMLLoader(getClass().getResource("register-view.fxml"));
     javafx.scene.layout.BorderPane registerPane = loader.load();
 
     //llamamos el controlador
     RegisterController controller = loader.getController();
+    controller.setMainApp(this);
 
 
     //limpamos el contenedor principal para llamar una nueva vista

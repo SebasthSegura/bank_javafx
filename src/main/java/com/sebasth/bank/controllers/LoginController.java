@@ -1,6 +1,7 @@
 package com.sebasth.bank.controllers;
 
 import com.sebasth.bank.SistemBank;
+import com.sebasth.bank.objects.User;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -74,6 +75,17 @@ public class LoginController {
         if (mainApp != null){
             try {
                 mainApp.showRegisterView();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+    @FXML
+    private void navegateToUser() {
+        if (mainApp != null) {
+            try {
+                mainApp.showUserView(new User("Sebasth"));
             } catch (Exception e) {
                 e.printStackTrace();
             }
