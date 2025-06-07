@@ -9,10 +9,12 @@ public class User {
     private String userName;
     private String firstName;
     private String lastName;
+    private String email;
     private List<CreditCard> creditCards;
     private int age;
     private String numberId;
     private double walletBalance;
+    private String description;
 
 
     // metodo para poder ingresar un usuario y los parametros que recibira
@@ -26,6 +28,8 @@ public class User {
     public User() {
         this.userId = userId;
         this.userName = userName;
+        this.email = email;
+        this.description = description;
         this.firstName = firstName;
         this.lastName = lastName;
         this.creditCards = new ArrayList<>(creditCards);
@@ -36,6 +40,19 @@ public class User {
 
 
     //añadimos los getters
+
+    public String getEmail() {
+        return email;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
     public String getUserName() {
         return userName;
     }
@@ -70,6 +87,9 @@ public class User {
 
     //setter para poder modificar los datos del usuario
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
     public void setUserName(String userName) {
         this.userName = userName;
