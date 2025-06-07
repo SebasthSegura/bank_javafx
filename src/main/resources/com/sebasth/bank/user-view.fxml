@@ -22,6 +22,7 @@
                   <Font size="11.0" />
                </font>
             </Button>
+            <Label fx:id="walletBalanceLabel" layoutX="125.0" layoutY="21.0" prefHeight="17.0" prefWidth="112.0" text="Balance" />
          </children>
       </AnchorPane>
    </top>

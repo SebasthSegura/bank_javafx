@@ -27,7 +27,7 @@ public class UserController {
             userInfo,
             descriptionLabel,
             emailInfo,
-            numberIdInfoTex;
+            numberIdInfo;
 
     @FXML
     private TextField nameInfoText,
